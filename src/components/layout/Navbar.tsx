@@ -6,7 +6,6 @@ const navItems: NavItem[] = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
   { id: 'services', label: 'Services' },
-  { id: 'fleet', label: 'Fleet' },
   { id: 'journey', label: 'Our Journey' },
   { id: 'gallery', label: 'Gallery' },
   { id: 'team', label: 'Our Team' },

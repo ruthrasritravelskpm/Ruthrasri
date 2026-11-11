@@ -13,8 +13,14 @@ export function HeroContent({ slide }: HeroContentProps) {
         data-hero-title
         className="max-w-[440px] font-['Playfair_Display'] text-3xl leading-[1.05] text-white sm:text-5xl sm:leading-[0.92] md:text-6xl lg:text-7xl"
       >
-        {slide.name}
+        {slide.heading}
       </h1>
+      <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1">
+        <p className="text-xs uppercase tracking-[0.24em] text-[#F0D69A] sm:text-sm">
+          {slide.name}
+        </p>
+       
+      </div>
       <p data-hero-description className="mt-4 max-w-lg text-sm leading-6 text-[#D9D9D9] sm:mt-5 sm:text-base sm:leading-7 md:text-lg">
         {slide.description}
       </p>
@@ -29,11 +35,11 @@ export function HeroContent({ slide }: HeroContentProps) {
       </div>
 
       <div className="mt-7 flex flex-wrap gap-3 sm:mt-10 sm:gap-4" data-hero-cta>
-        <a href="#fleet" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#D4AF66] px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#080808] transition-all duration-300 hover:bg-[#F0D69A] sm:px-6 sm:text-[11px] sm:tracking-[0.2em]">
-          Explore Fleet
+        <a href="#contact" className="inline-flex min-h-12 items-center justify-center rounded-full bg-[#D4AF66] px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#080808] transition-all duration-300 hover:bg-[#F0D69A] sm:px-6 sm:text-[11px] sm:tracking-[0.2em]">
+          {slide.ctaLabel}
         </a>
-        <a href="#contact" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#D4AF66] px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#F0D69A] transition-all duration-300 hover:bg-[#D4AF66]/10 sm:px-6 sm:text-[11px] sm:tracking-[0.2em]">
-          Contact Us
+        <a href="#journey" className="inline-flex min-h-12 items-center justify-center rounded-full border border-[#D4AF66] px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#F0D69A] transition-all duration-300 hover:bg-[#D4AF66]/10 sm:px-6 sm:text-[11px] sm:tracking-[0.2em]">
+          Our Journey
         </a>
       </div>
     </div>

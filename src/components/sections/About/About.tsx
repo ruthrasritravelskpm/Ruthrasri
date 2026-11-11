@@ -16,7 +16,7 @@ export function About() {
           <div ref={imageRef} className="relative overflow-hidden rounded-[20px]">
             <img
               src="/images/gallery/ruthrasri-travel-aboutus-image.png"
-              alt="Luxury travel experience in a premium vehicle"
+              alt="Maruti Suzuki Dzire and Ruthrasri Travels staff outside Summit Palace in Kanchipuram"
               className="h-[520px] w-full object-cover grayscale-[0.15]"
               loading="lazy"
             />

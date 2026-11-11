@@ -1,10 +1,18 @@
-import type { Vehicle } from '../types';
+import { heroCars } from './heroCars';
 
 export interface JourneyMilestone {
   year: string;
   title: string;
   description: string;
   suggested?: boolean;
+}
+
+interface GrowingFleetVehicle {
+  id: string;
+  name: string;
+  category: string;
+  image: string;
+  alt: string;
 }
 
 export const journeyMilestones: JourneyMilestone[] = [
@@ -40,51 +48,21 @@ export const journeyMilestones: JourneyMilestone[] = [
   {
     year: '2025–2026',
     title: 'Our Growth Today',
-    description: 'A fleet of 15+ vehicles serving 500+ customers and 50+ companies.',
+    description: 'A fleet of 15+ vehicles serving more than 300 customers and 25+ companies.',
   },
 ];
 
 export const journeyStats = [
   { value: 15, prefix: '', suffix: '+', label: 'Vehicles' },
-  { value: 500, prefix: '', suffix: '+', label: 'Happy Customers' },
-  { value: 50, prefix: '', suffix: '+', label: 'Corporate Clients' },
+  { value: 300, prefix: '', suffix: '+', label: 'Customers Served' },
+  { value: 25, prefix: '', suffix: '+', label: 'Companies Served' },
   { value: 2015, prefix: 'Since ', suffix: '', label: 'Ruthrasri Travels' },
 ];
 
-export const growingFleet: Pick<Vehicle, 'id' | 'name' | 'category' | 'image' | 'alt'>[] = [
-  {
-    id: 'ertiga-tour-m-2025-1',
-    name: 'Maruti Suzuki Ertiga Tour M – 2025 (Vehicle 1)',
-    category: '7-Seater Family Tour MPV',
-    image: '/images/vehicles/ruthrasri-travel-ertiga-tour-m-2025-1.jpg',
-    alt: 'Maruti Suzuki Ertiga Tour M for Ruthrasri Travels',
-  },
-  {
-    id: 'ertiga-tour-m-2025-2',
-    name: 'Maruti Suzuki Ertiga Tour M – 2025 (Vehicle 2)',
-    category: '7-Seater Family Tour MPV',
-    image: '/images/vehicles/ruthrasri-travel-ertiga-tour-m-2025-2.jpg',
-    alt: 'Maruti Suzuki Ertiga Tour M for Ruthrasri Travels',
-  },
-  {
-    id: 'dzire-tour-s-2024',
-    name: 'Maruti Suzuki Dzire Tour S – 2024',
-    category: 'Executive Tour Sedan',
-    image: '/images/vehicles/ruthrasri-travel-dzire-tour-s-2024.jpg',
-    alt: 'Maruti Suzuki Dzire Tour S for Ruthrasri Travels',
-  },
-  {
-    id: 'dzire-tour-s-2025',
-    name: 'Maruti Suzuki Dzire Tour S – 2025',
-    category: 'Business Tour Sedan',
-    image: '/images/vehicles/ruthrasri-travel-dzire-tour-s-2025.jpg',
-    alt: 'Maruti Suzuki Dzire Tour S for Ruthrasri Travels',
-  },
-  {
-    id: 'dzire-tour-s-2026',
-    name: 'Maruti Suzuki Dzire Tour S – 2026',
-    category: 'Premium Tour Sedan',
-    image: '/images/vehicles/ruthrasri-travel-dzire-tour-s-2026.jpg',
-    alt: 'Maruti Suzuki Dzire Tour S for Ruthrasri Travels',
-  },
-];
+export const growingFleet: GrowingFleetVehicle[] = heroCars.map(({ id, name, category, image, alt }) => ({
+  id,
+  name,
+  category,
+  image,
+  alt,
+}));

@@ -12,7 +12,7 @@ export function Hero() {
   const [isHovered, setIsHovered] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const isPaused = isHovered || prefersReducedMotion;
-  const { currentIndex, next, prev, goTo } = useHeroSlider(heroCars.length, 5000, isPaused);
+  const { currentIndex, next, prev, goTo } = useHeroSlider(heroCars.length, 3000, isPaused);
   const sectionRef = useRef<HTMLElement | null>(null);
   const previousSlide = heroCars[(currentIndex - 1 + heroCars.length) % heroCars.length];
   const currentSlide = heroCars[currentIndex];

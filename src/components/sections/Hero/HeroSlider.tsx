@@ -42,18 +42,18 @@ export function HeroSlider({ slide, previousSlide, nextSlide, currentIndex, tota
           alt=""
           aria-hidden="true"
           decoding="async"
-          className="hero-slide-image absolute inset-0 h-full w-full object-contain object-[center_16%] opacity-0 lg:object-cover lg:object-center"
+          className="hero-slide-image absolute inset-0 h-full w-full object-contain object-[center_20%] opacity-0 lg:object-cover lg:object-center"
         />
       ) : null}
 
       <img
         ref={currentImageRef}
         src={slide.image}
-        alt=""
-        aria-hidden="true"
+        alt={slide.alt}
         fetchPriority={currentIndex === 0 ? 'high' : 'auto'}
+        loading="eager"
         decoding="async"
-        className="hero-slide-image absolute inset-0 h-full w-full object-contain object-[center_16%] opacity-100 lg:object-cover lg:object-center"
+        className="hero-slide-image absolute inset-0 h-full w-full object-contain object-[center_20%] opacity-100 lg:object-cover lg:object-center"
       />
 
       <img

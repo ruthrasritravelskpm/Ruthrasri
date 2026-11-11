@@ -5,7 +5,14 @@ import type { CSSProperties } from 'react';
 import type { IconType } from 'react-icons';
 import { businessInfo } from '../../data/businessInfo';
 
-const quickLinks = ['Home', 'About', 'Services', 'Fleet', 'Gallery', 'Contact'];
+const quickLinks = [
+  { id: 'home', label: 'Home' },
+  { id: 'about', label: 'About' },
+  { id: 'services', label: 'Services' },
+  { id: 'journey', label: 'Our Journey' },
+  { id: 'gallery', label: 'Gallery' },
+  { id: 'contact', label: 'Contact' },
+];
 
 const socialLinks: { name: string; href: string; color: string; Icon: IconType }[] = [
   { name: 'Instagram', href: 'https://www.instagram.com/your-profile/', color: '#E4405F', Icon: FaInstagram },
@@ -46,10 +53,10 @@ export function Footer() {
           <div>
             <p className="mb-5 text-xs font-medium uppercase tracking-[0.24em] text-[#F5B942]">Quick Links</p>
             <ul className="space-y-3 text-sm text-white/70">
-              {quickLinks.map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase()}`} className="transition-colors duration-300 hover:text-[#F5B942]">
-                    {link}
+              {quickLinks.map(({ id, label }) => (
+                <li key={id}>
+                  <a href={`#${id}`} className="transition-colors duration-300 hover:text-[#F5B942]">
+                    {label}
                   </a>
                 </li>
               ))}

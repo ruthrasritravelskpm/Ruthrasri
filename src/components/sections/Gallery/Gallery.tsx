@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, X } from 'lucide-react';
+import { heroCars } from '../../../data/heroCars';
 import { SectionHeading } from '../../common/SectionHeading';
 
 const galleryImages = [
-  '/images/gallery/ruthrasri-travel-aboutus-image.png',
-  '/images/gallery/gallery-02.svg',
-  '/images/gallery/gallery-03.svg',
-  '/images/gallery/gallery-04.svg',
-  '/images/gallery/gallery-05.svg',
-  '/images/gallery/gallery-06.svg',
+  {
+    src: '/images/gallery/ruthrasri-travel-aboutus-image.png',
+    alt: 'Maruti Suzuki Dzire and Ruthrasri Travels staff outside Summit Palace in Kanchipuram',
+  },
+  ...heroCars.map(({ name, image, alt }) => ({
+    src: image,
+    alt: `${name} — ${alt}`,
+  })),
 ];
 
 export function Gallery() {
@@ -42,16 +45,16 @@ export function Gallery() {
       />
 
       <div className="mt-12 columns-1 gap-5 sm:columns-2 xl:columns-3">
-        {galleryImages.map((image, index) => (
+        {galleryImages.map(({ src, alt }, index) => (
           <button
-            key={image}
+            key={src}
             type="button"
             onClick={() => setSelectedIndex(index)}
             className="group mb-5 block w-full overflow-hidden rounded-[24px] border border-[#D4AF66]/20 bg-[#171717] text-left"
           >
             <img
-              src={image}
-              alt={`Gallery image ${index + 1}`}
+              src={src}
+              alt={alt}
               loading="lazy"
               className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
@@ -72,8 +75,8 @@ export function Gallery() {
             </button>
 
             <img
-              src={galleryImages[selectedIndex]}
-              alt="Expanded gallery view"
+              src={galleryImages[selectedIndex].src}
+              alt={galleryImages[selectedIndex].alt}
               className="max-h-[80vh] w-full object-cover"
             />
 

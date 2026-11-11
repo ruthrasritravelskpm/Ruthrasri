@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-export function useHeroSlider(totalSlides: number, autoplayDelay = 5000, isPaused = false) {
+export function useHeroSlider(totalSlides: number, autoplayDelay = 3000, isPaused = false) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDocumentVisible, setIsDocumentVisible] = useState(() => !document.hidden);
   const timeoutRef = useRef<number | null>(null);

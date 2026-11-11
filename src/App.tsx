@@ -4,7 +4,6 @@ import { Footer } from './components/layout/Footer';
 import { Navbar } from './components/layout/Navbar';
 import { About } from './components/sections/About/About';
 import { Contact } from './components/sections/Contact/Contact';
-import { Fleet } from './components/sections/Fleet/Fleet';
 import { Gallery } from './components/sections/Gallery/Gallery';
 import { Hero } from './components/sections/Hero/Hero';
 import { Journey } from './components/sections/Journey/Journey';
@@ -80,7 +79,6 @@ function App() {
         <Hero />
         <About />
         <Services />
-        <Fleet />
         <Journey />
         <WhyChooseUs />
         <Gallery />

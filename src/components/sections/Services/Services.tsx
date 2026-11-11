@@ -32,7 +32,7 @@ export function Services() {
                 <div className="overflow-hidden">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={service.alt}
                     className="h-52 w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />

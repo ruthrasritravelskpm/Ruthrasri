@@ -1,22 +1,18 @@
 export interface HeroCar {
   id: string;
   name: string;
+  heading: string;
   category: string;
   seatingCapacity: number;
   description: string;
   image: string;
   alt: string;
-}
-
-export interface Vehicle {
-  id: string;
-  name: string;
-  category: string;
-  seatingCapacity: number;
-  luggageCapacity?: string;
-  description: string;
-  image: string;
-  alt: string;
+  ctaLabel: string;
+  imageCredit?: {
+    artist: string;
+    license: string;
+    source: string;
+  };
 }
 
 export interface ServiceItem {
@@ -24,16 +20,8 @@ export interface ServiceItem {
   title: string;
   description: string;
   image: string;
+  alt: string;
   icon: 'PlaneTakeoff' | 'MapPinned' | 'CarFront' | 'Building2' | 'Sparkles';
-}
-
-export interface Testimonial {
-  id: string;
-  name: string;
-  title: string;
-  review: string;
-  rating?: number;
-  verified?: boolean;
 }
 
 export interface BusinessInfo {
