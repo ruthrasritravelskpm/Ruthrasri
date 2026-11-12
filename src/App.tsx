@@ -8,6 +8,7 @@ import { Gallery } from './components/sections/Gallery/Gallery';
 import { Hero } from './components/sections/Hero/Hero';
 import { Journey } from './components/sections/Journey/Journey';
 import { OurTeam } from './components/sections/OurTeam/OurTeam';
+import { Promises } from './components/sections/Promises/Promises';
 import { Services } from './components/sections/Services/Services';
 import { Testimonials } from './components/sections/Testimonials/Testimonials';
 import { WhyChooseUs } from './components/sections/WhyChooseUs/WhyChooseUs';
@@ -77,6 +78,7 @@ function App() {
       <div className={`min-h-screen bg-[#F8FAFC] text-[#475569] transition-opacity duration-500 ${loading ? 'opacity-0' : 'opacity-100'}`}>
         <Navbar />
         <Hero />
+        <Promises />
         <About />
         <Services />
         <Journey />
