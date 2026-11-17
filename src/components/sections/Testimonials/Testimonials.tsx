@@ -5,6 +5,35 @@ import { customerReviews, organizationsServed } from '../../../data/reviewHighli
 const reviewsPerPage = 3;
 const pageCount = Math.ceil(customerReviews.length / reviewsPerPage);
 
+function OrganizationCards({ duplicate = false }: { duplicate?: boolean }) {
+  return (
+    <ul className="organizations-marquee-group" aria-hidden={duplicate || undefined}>
+      {organizationsServed.map(({ name, logo, logoBackground }) => (
+        <li
+          key={name}
+          className="group flex h-[128px] w-[188px] shrink-0 flex-col items-center justify-center gap-2 rounded-xl border border-[#E2E8F0] bg-white px-4 py-4 text-center shadow-[0_8px_26px_rgba(23,55,70,0.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#D9A441] hover:shadow-[0_16px_34px_rgba(23,55,70,0.12)]"
+        >
+          <div
+            className="flex h-[58px] w-full items-center justify-center rounded-lg px-3"
+            style={{ backgroundColor: logoBackground }}
+          >
+            <img
+              src={logo}
+              alt={`${name} logo`}
+              width="150"
+              height="58"
+              loading="lazy"
+              decoding="async"
+              className="h-full max-h-12 w-full max-w-[150px] object-contain transition-transform duration-300 group-hover:scale-[1.04]"
+            />
+          </div>
+          <span className="text-xs font-semibold text-[#173746]">{name}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function Testimonials() {
   const [page, setPage] = useState(0);
   const firstReviewIndex = page * reviewsPerPage;
@@ -86,16 +115,12 @@ export function Testimonials() {
           <h3 className="mb-5 text-xs font-medium uppercase tracking-[0.24em] text-[#A5A5A5]">
             Organizations served
           </h3>
-          <ul className="flex flex-wrap justify-center gap-3">
-            {organizationsServed.map((organization) => (
-              <li
-                key={organization}
-                className="rounded-full border border-[#D4AF66]/20 bg-[#171717] px-5 py-3 text-sm font-medium text-[#D9D9D9]"
-              >
-                {organization}
-              </li>
-            ))}
-          </ul>
+          <div className="organizations-marquee" role="region" aria-label="Organizations served">
+            <div className="organizations-marquee-track">
+              <OrganizationCards />
+              <OrganizationCards duplicate />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -44,11 +44,11 @@ export function Promises() {
               <p className="promise-priority">Our strongest customer commitment</p>
               <h3>Airport Pickup &amp; Drop – On-Time Guarantee</h3>
             </div>
-            <p className="promise-booking-badge">24-hour advance booking required</p>
+            <p className="promise-booking-badge">12-hour advance booking required</p>
           </div>
 
           <p className="promise-eligibility">
-            Airport pickup and drop bookings must be confirmed at least 24 hours before the scheduled journey to
+            Airport pickup and drop bookings must be confirmed at least 12 hours before the scheduled journey to
             qualify for these commitments.
           </p>
 

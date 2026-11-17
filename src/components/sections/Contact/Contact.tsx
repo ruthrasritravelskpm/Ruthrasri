@@ -122,8 +122,8 @@ export function Contact() {
         subtitle="Share your travel requirement and we’ll help you arrange a smooth, comfortable and well-managed ride."
       />
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <div className="rounded-[28px] border border-[#D4AF66]/20 bg-[#171717] p-8">
+      <div className="mt-12 grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
+        <div className="min-w-0 rounded-[28px] border border-[#D4AF66]/20 bg-[#171717] p-5 sm:p-8">
           <div className="grid gap-6 md:grid-cols-2">
             <a href={`tel:${businessInfo.phone.replace(/\s+/g, '')}`} className="rounded-[20px] border border-[#D4AF66]/20 bg-[#080808] p-5 transition-colors duration-300 hover:border-[#D4AF66]/60">
               <Phone className="mb-4 h-5 w-5 text-[#D4AF66]" />
@@ -140,7 +140,7 @@ export function Contact() {
             <a href={`mailto:${businessInfo.email}`} className="rounded-[20px] border border-[#D4AF66]/20 bg-[#080808] p-5 transition-colors duration-300 hover:border-[#D4AF66]/60">
               <Mail className="mb-4 h-5 w-5 text-[#D4AF66]" />
               <p className="text-xs uppercase tracking-[0.2em] text-[#D4AF66]">Email</p>
-              <p className="mt-3 text-base text-white">{businessInfo.email}</p>
+              <p className="mt-3 text-base text-white [overflow-wrap:anywhere]">{businessInfo.email}</p>
             </a>
 
             <a href={businessInfo.googleMapsUrl} target="_blank" rel="noreferrer" className="rounded-[20px] border border-[#D4AF66]/20 bg-[#080808] p-5 transition-colors duration-300 hover:border-[#D4AF66]/60">
@@ -151,7 +151,7 @@ export function Contact() {
           </div>
         </div>
 
-        <div className="rounded-[28px] border border-[#E2E8F0] bg-white p-6 shadow-[0_8px_26px_rgba(23,55,70,0.06)] sm:p-8">
+        <div className="min-w-0 rounded-[28px] border border-[#E2E8F0] bg-white p-6 shadow-[0_8px_26px_rgba(23,55,70,0.06)] sm:p-8">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#E99A24]">Contact form</p>
             <h3 className="mt-3 font-['Playfair_Display'] text-2xl text-[#173746] sm:text-3xl">Ready when you are.</h3>

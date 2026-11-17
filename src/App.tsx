@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Footer } from './components/layout/Footer';
 import { Navbar } from './components/layout/Navbar';
 import { About } from './components/sections/About/About';
@@ -12,6 +13,7 @@ import { Promises } from './components/sections/Promises/Promises';
 import { Services } from './components/sections/Services/Services';
 import { Testimonials } from './components/sections/Testimonials/Testimonials';
 import { WhyChooseUs } from './components/sections/WhyChooseUs/WhyChooseUs';
+import { VehicleShowcase } from './components/sections/VehicleShowcase/VehicleShowcase';
 import { registerGsapPlugins } from './animations/gsap';
 import { initScrollAnimations } from './animations/scrollAnimations';
 import { ScrollToTop } from './components/common/ScrollToTop';
@@ -27,6 +29,7 @@ function App() {
     initScrollAnimations();
 
     const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+    lenis.on('scroll', ScrollTrigger.update);
     let rafId = 0;
 
     const raf = (time: number) => {
@@ -38,6 +41,7 @@ function App() {
 
     return () => {
       cancelAnimationFrame(rafId);
+      lenis.off('scroll', ScrollTrigger.update);
       lenis.destroy();
     };
   }, []);
@@ -82,6 +86,7 @@ function App() {
         <About />
         <Services />
         <Journey />
+        <VehicleShowcase />
         <WhyChooseUs />
         <Gallery />
         <OurTeam />

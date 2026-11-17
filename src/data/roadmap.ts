@@ -1,10 +1,9 @@
 import { heroCars } from './heroCars';
 
 export interface JourneyMilestone {
-  year: string;
+  period: string;
   title: string;
   description: string;
-  suggested?: boolean;
 }
 
 interface GrowingFleetVehicle {
@@ -17,38 +16,22 @@ interface GrowingFleetVehicle {
 
 export const journeyMilestones: JourneyMilestone[] = [
   {
-    year: '2015',
-    title: 'The Beginning',
-    description: 'Ruthrasri Travels started its journey.',
+    period: '2015',
+    title: 'The first mile',
+    description:
+      'Founded by Jayabalan S, Ruthrasri Travels began with a commitment to dependable, comfortable journeys.',
   },
   {
-    year: '2017',
-    title: 'First Fleet Expansion',
-    description: 'Expanded our vehicle fleet.',
-    suggested: true,
+    period: 'Every journey',
+    title: 'Travel for every need',
+    description:
+      'From airport pickups and city rides to outstation, corporate, and special-event travel, we help customers get where they need to go.',
   },
   {
-    year: '2019',
-    title: 'Continued Growth',
-    description: 'Invested in additional vehicles.',
-    suggested: true,
-  },
-  {
-    year: '2021',
-    title: 'Moving Forward',
-    description: 'Continued expanding our transportation services.',
-    suggested: true,
-  },
-  {
-    year: '2023',
-    title: 'Growing Stronger',
-    description: 'Further fleet expansion and improved services.',
-    suggested: true,
-  },
-  {
-    year: '2025–2026',
-    title: 'Our Growth Today',
-    description: 'A fleet of 15+ vehicles serving more than 300 customers and 25+ companies.',
+    period: 'Today',
+    title: 'Built on customer trust',
+    description:
+      '15+ vehicles, 300+ customers served, and 25+ companies served—continuing our focus on reliable, comfortable travel.',
   },
 ];
 

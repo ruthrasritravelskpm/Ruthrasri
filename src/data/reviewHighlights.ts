@@ -74,10 +74,10 @@ export const customerReviews = (() => {
 })();
 
 export const organizationsServed = [
-  'Applus+ IDIADA',
-  'GRT Hotels',
-  'MM Hotels',
-  'Amara Raja',
-  'Caterpillar',
-  'L&T Datacenter',
+  { name: 'Applus+ IDIADA', logo: '/images/organizations/applus-idiada.png', logoBackground: '#FFFFFF' },
+  { name: 'GRT Hotels', logo: '/images/organizations/grt-hotels.png', logoBackground: '#FFFFFF' },
+  { name: 'MM Hotels', logo: '/images/organizations/mm-hotels.png', logoBackground: '#FFFFFF' },
+  { name: 'Amara Raja', logo: '/images/organizations/amara-raja.svg', logoBackground: '#173746' },
+  { name: 'Caterpillar', logo: '/images/organizations/caterpillar.png', logoBackground: '#FFFFFF' },
+  { name: 'L&T Datacenter', logo: '/images/organizations/lt-datacenter.png', logoBackground: '#FFFFFF' },
 ];

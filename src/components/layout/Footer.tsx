@@ -1,6 +1,5 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
-import { SiX } from 'react-icons/si';
+import { FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import type { CSSProperties } from 'react';
 import type { IconType } from 'react-icons';
 import { businessInfo } from '../../data/businessInfo';
@@ -15,11 +14,13 @@ const quickLinks = [
 ];
 
 const socialLinks: { name: string; href: string; color: string; Icon: IconType }[] = [
-  { name: 'Instagram', href: 'https://www.instagram.com/your-profile/', color: '#E4405F', Icon: FaInstagram },
-  { name: 'Facebook', href: 'https://www.facebook.com/your-page', color: '#1877F2', Icon: FaFacebookF },
-  { name: 'WhatsApp', href: 'https://wa.me/91XXXXXXXXXX', color: '#25D366', Icon: FaWhatsapp },
-  { name: 'YouTube', href: 'https://www.youtube.com/@your-channel', color: '#FF0000', Icon: FaYoutube },
-  { name: 'X', href: 'https://x.com/your-handle', color: '#000000', Icon: SiX },
+  { name: 'LinkedIn', href: 'https://in.linkedin.com/in/ruthrasri-travels-872892449', color: '#0A66C2', Icon: FaLinkedinIn },
+  {
+    name: 'WhatsApp',
+    href: `https://wa.me/${businessInfo.whatsapp.replace(/\D/g, '')}`,
+    color: '#25D366',
+    Icon: FaWhatsapp,
+  },
 ];
 
 export function Footer() {

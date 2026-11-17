@@ -140,3 +140,53 @@ section:not(#home) [class*="border-[#D4AF66]"] {
     transition-duration: 0.01ms !important;
   }
 }
+
+.organizations-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+}
+
+.organizations-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: organizations-marquee-scroll 36s linear infinite;
+  will-change: transform;
+}
+
+.organizations-marquee:hover .organizations-marquee-track,
+.organizations-marquee:focus-within .organizations-marquee-track {
+  animation-play-state: paused;
+}
+
+.organizations-marquee-group {
+  display: flex;
+  flex: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0 1rem 0 0;
+  list-style: none;
+}
+
+@keyframes organizations-marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .organizations-marquee {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .organizations-marquee-track {
+    animation: none;
+    will-change: auto;
+  }
+
+  .organizations-marquee-group[aria-hidden='true'] {
+    display: none;
+  }
+}
