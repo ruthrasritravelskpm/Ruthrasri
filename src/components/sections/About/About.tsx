@@ -17,8 +17,11 @@ export function About() {
             <img
               src="/images/gallery/ruthrasri-travel-aboutus-image.png"
               alt="Maruti Suzuki Dzire and Ruthrasri Travels staff outside Summit Palace in Kanchipuram"
+              width="960"
+              height="536"
               className="h-[520px] w-full object-cover grayscale-[0.15]"
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/60 via-transparent to-transparent" />
           </div>
@@ -31,7 +34,7 @@ export function About() {
           </h2>
 
           <p className="mt-7 text-base leading-8 text-[#A5A5A5]">
-            Ruthrasri Travels is focused on premium, dependable road travel for city movement, business transfers and memorable journeys. We combine polished service with a calm, comfortable experience that feels elevated from the first pickup to the final drop.
+            Based in Kanchipuram, Tamil Nadu, Ruthrasri Travels provides dependable road travel for local journeys, Chennai airport transfers, business transportation and special events. We combine polished service with a calm, comfortable experience from the first pickup to the final drop.
           </p>
           <p className="mt-5 text-base leading-8 text-[#A5A5A5]">
             Our travel philosophy is simple: every trip should feel thoughtful, organized and effortless. From punctual arrivals to clean, well-maintained vehicles and attentive support, we aim to create a smooth, reassuring experience for every passenger.

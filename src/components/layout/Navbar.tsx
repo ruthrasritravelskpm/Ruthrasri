@@ -65,7 +65,14 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
-        <button type="button" onClick={() => handleNavigate('home')} className="flex items-center gap-3 text-left">
+        <a
+          href="#home"
+          onClick={(event) => {
+            event.preventDefault();
+            handleNavigate('home');
+          }}
+          className="flex items-center gap-3 text-left"
+        >
           <div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-[#E2E8F0] bg-white">
             <img
               src="/images/brand/ruthrasri-travels-mark-80.png"
@@ -81,14 +88,18 @@ export function Navbar() {
             <div className="font-['Playfair_Display'] text-lg font-semibold text-[#173746]">Ruthrasri</div>
             <div className="text-[10px] uppercase tracking-[0.28em] text-[#64748B]">Travels</div>
           </div>
-        </button>
+        </a>
 
         <div className="hidden items-center gap-5 xl:flex">
           {navItems.map((item) => (
-            <button
+            <a
               key={item.id}
-              type="button"
-              onClick={() => handleNavigate(item.id)}
+              href={`#${item.id}`}
+              onClick={(event) => {
+                event.preventDefault();
+                handleNavigate(item.id);
+              }}
+              aria-current={activeSection === item.id ? 'location' : undefined}
               className={`relative text-sm uppercase tracking-[0.18em] transition-colors duration-300 ${
                 activeSection === item.id ? 'text-[#E99A24]' : 'text-[#475569] hover:text-[#173746]'
               }`}
@@ -96,7 +107,7 @@ export function Navbar() {
               <span className="after:content-[''] after:absolute after:-bottom-2 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-[#E99A24] after:transition-transform after:duration-300 hover:after:scale-x-100">
                 {item.label}
               </span>
-            </button>
+            </a>
           ))}
         </div>
 
@@ -117,6 +128,7 @@ export function Navbar() {
           onClick={() => setMenuOpen((prev) => !prev)}
           className="inline-flex items-center justify-center rounded-xl border border-[#E2E8F0] bg-white p-2 text-[#173746] xl:hidden"
           aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
         >
           {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -126,14 +138,18 @@ export function Navbar() {
         <div className="border-t border-[#E2E8F0] bg-white px-5 py-6 shadow-lg xl:hidden">
           <div className="flex flex-col gap-4">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.id}
-                type="button"
-                onClick={() => handleNavigate(item.id)}
+                href={`#${item.id}`}
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleNavigate(item.id);
+                }}
+                aria-current={activeSection === item.id ? 'location' : undefined}
                 className={`text-left text-sm uppercase tracking-[0.16em] ${activeSection === item.id ? 'font-semibold text-[#E99A24]' : 'text-[#475569]'}`}
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </div>
         </div>

@@ -31,13 +31,13 @@ export const journeyMilestones: JourneyMilestone[] = [
     period: 'Today',
     title: 'Built on customer trust',
     description:
-      '15+ vehicles, 300+ customers served, and 25+ companies served—continuing our focus on reliable, comfortable travel.',
+      '15+ vehicles, 1000+ customers served, and 25+ companies served—continuing our focus on reliable, comfortable travel.',
   },
 ];
 
 export const journeyStats = [
   { value: 15, prefix: '', suffix: '+', label: 'Vehicles' },
-  { value: 300, prefix: '', suffix: '+', label: 'Customers Served' },
+  { value: 1000, prefix: '', suffix: '+', label: 'Customers Served' },
   { value: 25, prefix: '', suffix: '+', label: 'Companies Served' },
   { value: 2015, prefix: 'Since ', suffix: '', label: 'Ruthrasri Travels' },
 ];

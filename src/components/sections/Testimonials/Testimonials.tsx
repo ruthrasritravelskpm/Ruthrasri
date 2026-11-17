@@ -52,7 +52,7 @@ export function Testimonials() {
             What passengers say
           </h2>
           <p className="mt-5 text-base leading-7 text-[#A5A5A5] md:text-lg">
-            Trusted by 300+ customers and 25+ companies for comfortable journeys, punctual pickups and professional service.
+            Trusted by 1000+ customers and 25+ companies for comfortable journeys, punctual pickups and professional service.
           </p>
         </header>
 

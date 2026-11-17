@@ -56,6 +56,7 @@ export function Gallery() {
               src={src}
               alt={alt}
               loading="lazy"
+              decoding="async"
               className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </button>
@@ -77,6 +78,7 @@ export function Gallery() {
             <img
               src={galleryImages[selectedIndex].src}
               alt={galleryImages[selectedIndex].alt}
+              decoding="async"
               className="max-h-[80vh] w-full object-cover"
             />
 

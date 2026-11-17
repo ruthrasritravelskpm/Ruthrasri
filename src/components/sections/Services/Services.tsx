@@ -17,7 +17,7 @@ export function Services() {
         <SectionHeading
           eyebrow="Services"
           title="Premium travel experiences for every journey."
-          subtitle="Thoughtful transportation solutions designed around comfort, punctuality and polished service."
+          subtitle="Travels in Kanchipuram for local car rental, Chennai airport pickup and drop, outstation, corporate, and wedding journeys."
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
@@ -26,15 +26,19 @@ export function Services() {
             return (
               <article
                 key={service.id}
-                className="group overflow-hidden rounded-[24px] border border-[#D4AF66]/20 bg-[#171717] transition-all duration-500 hover:-translate-y-1 hover:border-[#D4AF66]/60"
+                id={service.id}
+                className="group scroll-mt-24 overflow-hidden rounded-[24px] border border-[#D4AF66]/20 bg-[#171717] transition-all duration-500 hover:-translate-y-1 hover:border-[#D4AF66]/60"
                 style={{ animationDelay: `${index * 110}ms` }}
               >
                 <div className="overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.alt}
+                    width="720"
+                    height="687"
                     className="h-52 w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-6">
@@ -43,7 +47,11 @@ export function Services() {
                   </div>
                   <h3 className="font-['Playfair_Display'] text-2xl text-white">{service.title}</h3>
                   <p className="mt-4 text-sm leading-7 text-[#A5A5A5]">{service.description}</p>
-                  <a href="#contact" className="mt-6 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-[#F0D69A]">
+                  <a
+                    href="#contact"
+                    aria-label={`Enquire about ${service.title}`}
+                    className="mt-6 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-[#F0D69A]"
+                  >
                     Explore <ArrowUpRight className="h-4 w-4" />
                   </a>
                 </div>
